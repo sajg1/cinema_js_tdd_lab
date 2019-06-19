@@ -16,9 +16,9 @@ Cinema.prototype.findByTitle = function (titleToFind) {
   return result[0];
 };
 
-Cinema.prototype.findByGenre = function (property, propertyToFind) {
+Cinema.prototype.findByGenre = function (genreToFind) {
   const result = this.films.filter((film) => {
-    return (film.property === propertyToFind);
+    return (film.genre === genreToFind);
   });
   return result
 };

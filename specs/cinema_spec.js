@@ -42,7 +42,7 @@ describe('Cinema', function () {
 
 
   it('should be able to filter films by genre', function () {
-    const actual = cinema.findByGenre(genre, 'drama');
+    const actual = cinema.findByGenre('drama');
     assert.deepStrictEqual(actual, [moonlight, trainspotting]);
   });
 
@@ -58,7 +58,7 @@ describe('Cinema', function () {
 
   it('should be able to check whether all films are over a particular length', function () {
     const actual = cinema.filmsAreParticularLength(90);
-    const actual2 = cinema.filmsAreParticularLength(100);
+    // const actual2 = cinema.filmsAreParticularLength(100);
     assert.strictEqual(actual, true);
     // assert.strictEqual(actual2, false);
   });
